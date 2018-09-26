@@ -89,9 +89,28 @@ my-device, registry ID is my-registry, and project ID is blue-ocean-123.
   - `cmake .`
   - `make`
   - `make install`
-- `cd /home/pi/gcloud-iotcore-sample && git clone https://github.com/openssl/openssl && cd openssl && ./config && make && make install`
-- `cd /home/pi/gcloud-iotcore-sample && git clone https://github.com/benmcollins/libjwt && cd libjwt && autoreconf -i && ./configure && make && make install`
-- `cd /home/pi/gcloud-iotcore-sample && git clone https://github.com/eclipse/paho.mqtt.c.git && cd paho.mqtt.c && cmake -DPAHO_WITH_SSL=TRUE -DPAHO_BUILD_DOCUMENTATION=TRUE -DPAHO_BUILD_SAMPLES=TRUE . && make && make install`
+- Download, build and install OpenSSL
+  - `cd /home/pi/gcloud-iotcore-sample`
+  - `git clone https://github.com/openssl/openssl`
+  - `cd openssl`
+  - `./config`
+  - `make`
+  - `make install`
+- Download, build and install libjwt
+  - `cd /home/pi/gcloud-iotcore-sample`
+  - `git clone https://github.com/benmcollins/libjwt`
+  - `cd libjwt`
+  - `autoreconf -i`
+  - `./configure`
+  - `make`
+  - `make install`
+- Download, build and install paho.mqtt.c
+  - `cd /home/pi/gcloud-iotcore-sample`
+  - `git clone https://github.com/eclipse/paho.mqtt.c.git`
+  - `cd paho.mqtt.c`
+  - `cmake -DPAHO_WITH_SSL=TRUE -DPAHO_BUILD_DOCUMENTATION=TRUE -DPAHO_BUILD_SAMPLES=TRUE .`
+  - `make`
+  - `make install`
 - `export LD_LIBRARY_PATH=/usr/local/lib`
 ## Build and run sample
 - `cd /home/pi/gcloud-iotcore-sample`
