@@ -77,3 +77,18 @@ my-device, registry ID is my-registry, and project ID is blue-ocean-123.
         --projectid blue-ocean-123 --keypath ./rsa_private.pem --algorithm RS256 \
          --rootpath ./roots.pem --region us-central1
     
+## Prepare Raspberry Pi 2 (Raspbian Stretch Lite)
+`sudo su`
+`sudo apt-get update && apt-get upgrade -y`
+`apt-get install -y build-essential gcc clang git libssl-dev autoconf libtool cmake doxygen pkg-config unzip wget`
+`mkdir /home/pi/gcloud-iotcore-sample`
+`cd /home/pi/gcloud-iotcore-sample && git clone https://github.com/akheron/jansson && cd jansson && cmake . && make && make install`
+`cd /home/pi/gcloud-iotcore-sample && git clone https://github.com/openssl/openssl && cd openssl && ./config && make && make install`
+`cd /home/pi/gcloud-iotcore-sample && git clone https://github.com/benmcollins/libjwt && cd libjwt && autoreconf -i && ./configure && make && make install`
+`cd /home/pi/gcloud-iotcore-sample && git clone https://github.com/eclipse/paho.mqtt.c.git && cd paho.mqtt.c && cmake -DPAHO_WITH_SSL=TRUE -DPAHO_BUILD_DOCUMENTATION=TRUE -DPAHO_BUILD_SAMPLES=TRUE . && make && make install`
+`export LD_LIBRARY_PATH=/usr/local/lib`
+## Build and run sample
+`cd /home/pi/gcloud-iotcore-sample`
+`git clone https://github.com/marssys/cpp-docs-samples.git`
+`cd cpp-docs-samples/iot/mqtt-ciotc`
+`make`
