@@ -82,7 +82,7 @@ my-device, registry ID is my-registry, and project ID is blue-ocean-123.
 - `apt-get update && apt-get upgrade -y`
 - `apt-get install -y build-essential gcc clang git libssl-dev autoconf libtool cmake doxygen pkg-config unzip wget`
 - `mkdir /home/pi/gcloud-iotcore-sample`
-- Install Jansson
+- Download, build and install Jansson
   - `cd /home/pi/gcloud-iotcore-sample`
   - `git clone https://github.com/akheron/jansson`
   - `cd jansson`
