@@ -117,3 +117,4 @@ my-device, registry ID is my-registry, and project ID is blue-ocean-123.
 - `git clone https://github.com/marssys/cpp-docs-samples.git`
 - `cd cpp-docs-samples/iot/mqtt-ciotc`
 - `make`
+- `./mqtt_ciotc`
