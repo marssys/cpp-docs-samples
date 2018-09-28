@@ -78,9 +78,9 @@ my-device, registry ID is my-registry, and project ID is blue-ocean-123.
          --rootpath ./roots.pem --region us-central1
     
 ## Prepare Raspberry Pi 2 (Raspbian Stretch Lite)
-- `sudo su`
-- `apt-get update && apt-get upgrade -y`
-- `apt-get install -y build-essential gcc clang git libssl-dev autoconf libtool cmake doxygen pkg-config unzip wget texinfo`
+- `sudo apt-get update`
+- `sudo apt-get upgrade -y`
+- `sudo apt-get install -y build-essential gcc clang git libssl-dev autoconf libtool cmake doxygen pkg-config unzip wget texinfo`
 - `mkdir /home/pi/gcloud-iotcore-sample`
 - Download, build and install Jansson
   - `cd /home/pi/gcloud-iotcore-sample`
@@ -88,14 +88,14 @@ my-device, registry ID is my-registry, and project ID is blue-ocean-123.
   - `cd jansson`
   - `cmake .`
   - `make`
-  - `make install`
+  - `sudo make install`
 - Download, build and install OpenSSL
   - `cd /home/pi/gcloud-iotcore-sample`
   - `git clone https://github.com/openssl/openssl`
   - `cd openssl`
   - `./config`
   - `make`
-  - `make install`
+  - `sudo make install`
 - Download, build and install libjwt
   - `cd /home/pi/gcloud-iotcore-sample`
   - `git clone https://github.com/benmcollins/libjwt`
@@ -104,14 +104,14 @@ my-device, registry ID is my-registry, and project ID is blue-ocean-123.
   - `./configure`
   - `make all`
   - `make check`
-  - `make install`
+  - `sudo make install`
 - Download, build and install paho.mqtt.c
   - `cd /home/pi/gcloud-iotcore-sample`
   - `git clone https://github.com/eclipse/paho.mqtt.c.git`
   - `cd paho.mqtt.c`
   - `cmake -DPAHO_WITH_SSL=TRUE -DPAHO_BUILD_DOCUMENTATION=TRUE -DPAHO_BUILD_SAMPLES=TRUE .`
   - `make`
-  - `make install`
+  - `sudo make install`
 - `export LD_LIBRARY_PATH=/usr/local/lib`
 ## Build and run sample
 - `cd /home/pi/gcloud-iotcore-sample`
