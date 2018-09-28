@@ -80,7 +80,7 @@ my-device, registry ID is my-registry, and project ID is blue-ocean-123.
 ## Prepare Raspberry Pi 2 (Raspbian Stretch Lite)
 - `sudo su`
 - `apt-get update && apt-get upgrade -y`
-- `apt-get install -y build-essential gcc clang git libssl-dev autoconf libtool cmake doxygen pkg-config unzip wget`
+- `apt-get install -y build-essential gcc clang git libssl-dev autoconf libtool cmake doxygen pkg-config unzip wget texinfo`
 - `mkdir /home/pi/gcloud-iotcore-sample`
 - Download, build and install Jansson
   - `cd /home/pi/gcloud-iotcore-sample`
@@ -102,7 +102,8 @@ my-device, registry ID is my-registry, and project ID is blue-ocean-123.
   - `cd libjwt`
   - `autoreconf -i`
   - `./configure`
-  - `make`
+  - `make all`
+  - `make check`
   - `make install`
 - Download, build and install paho.mqtt.c
   - `cd /home/pi/gcloud-iotcore-sample`
