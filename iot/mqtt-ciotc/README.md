@@ -118,4 +118,6 @@ my-device, registry ID is my-registry, and project ID is blue-ocean-123.
 - `git clone https://github.com/marssys/cpp-docs-samples.git`
 - `cd cpp-docs-samples/iot/mqtt-ciotc`
 - `make`
-- `./mqtt_ciotc`
+- `openssl req -x509 -newkey rsa:2048 -keyout rsa_private.pem -nodes  -out rsa_cert.pem -subj "/CN=unused"`
+- `wget https://pki.google.com/roots.pem`
+- `./mqtt_ciotc "Hello world!" --deviceid rpi0 --registryid kberry_registry --projectid kc-rpi-prototype --keypath ./rsa_private.pem --algorithm RS256 --rootpath ./roots.pem --region europe-west1`
